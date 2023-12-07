@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Gasoek+One&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+.main-bg{
+  background-image: url('https://wallpapercave.com/dwp1x/wp10476520.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header{
+    /* background-color: red; */
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--white);
+}
+.hero, header{
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* ParallaxSlides.css */
+
+.parallax-container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .parallax-slide {
+    position: relative;
+    height: 500px; /* Adjust the height of your slides */
+    background-size: cover;
+    background-position: center;
+    background-image: url('https://cdn.dribbble.com/users/1801372/screenshots/12928554/media/8c2267d0167ffc05ec58f1364e916e4b.png');
+  }
+  
+  .slide-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    backdrop-filter: blur(8px);
+    width: 100%;
+    height: 120%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white; /* Adjust text color as needed */
+  }
+  
+  .p-slide-1{
+    
+  backdrop-filter: blur(8px);
+  }
+.gap{
+  padding-bottom: 50px;
+  width: 100%;
+  height: 100px;
+}
+  .info-section{
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.107); */
+    margin-bottom: 140px;
+  }

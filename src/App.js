@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import './globals.css';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import ParallaxSlides from './components/ParallaxSlides';
+import ImageLeftSection from './components/ImageLeftSection';
+import ImageRightSection from './components/ImageRightSection';
+import ProfileSection from './components/ProfileSection';
+import { SECTION_DATA } from './constants';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className='main-bg'>
+        <Header/>
+        <Hero/>
+      </div>
+      <ParallaxSlides/>
+      <div className='gap'></div>
+      {SECTION_DATA.map((item) => 
+      (
+        item.left ?
+        <ImageLeftSection key={item.title} title={item.title} paragraph={item.paragraph} imageSrc='https://www.icccricketschedule.com/wp-content/uploads/2021/10/MS-Dhoni-playing-for-India.jpg' />
+        :
+        <ImageRightSection key={item.title} title={item.title} paragraph={item.paragraph} imageSrc='https://www.icccricketschedule.com/wp-content/uploads/2021/10/MS-Dhoni-playing-for-India.jpg' />
+      )
+      )}
+      <ProfileSection/>
+    </>
   );
 }
 
