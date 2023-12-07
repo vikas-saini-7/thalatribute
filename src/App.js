@@ -19,9 +19,9 @@ function App() {
       {SECTION_DATA.map((item) => 
       (
         item.left ?
-        <ImageLeftSection key={item.title} title={item.title} paragraph={item.paragraph} imageSrc='https://www.icccricketschedule.com/wp-content/uploads/2021/10/MS-Dhoni-playing-for-India.jpg' />
+        <ImageLeftSection key={item.title} title={item.title} paragraph={item.paragraph} imageSrc={item.imgSrc} />
         :
-        <ImageRightSection key={item.title} title={item.title} paragraph={item.paragraph} imageSrc='https://www.icccricketschedule.com/wp-content/uploads/2021/10/MS-Dhoni-playing-for-India.jpg' />
+        <ImageRightSection key={item.title} title={item.title} paragraph={item.paragraph} imageSrc={item.imgSrc} />
       )
       )}
       <ProfileSection/>
