@@ -6,7 +6,7 @@ import ImageLeftSection from './components/ImageLeftSection';
 import ImageRightSection from './components/ImageRightSection';
 import ProfileSection from './components/ProfileSection';
 import { SECTION_DATA } from './constants';
-
+//Main app code
 function App() {
   return (
     <>
